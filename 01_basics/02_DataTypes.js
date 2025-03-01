@@ -43,3 +43,6 @@ const arr = new Array("A", "B", "C", "D");
 console.log(arr);
 
 // ?                     Object (Key-Value pairs)	{ name: "Alice", age: 30 }
+
+let person = { name: "Alice", age: 30 }; // Object
+console.log(person.name + " is " + person.age);
