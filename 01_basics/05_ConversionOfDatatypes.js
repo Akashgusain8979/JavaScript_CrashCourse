@@ -48,6 +48,31 @@ let score6 = false;
 // console.log(booleanIsLoggenIn); // true
 
 let someNumber = 33;
-let stringNumber = String(someNumber);
-console.log(typeof stringNumber);
-console.log(stringNumber);
+// let stringNumber = String(someNumber);
+// console.log(typeof stringNumber);
+// console.log(stringNumber);
+
+let str1 = "Hello ";
+let str2 = "Akash";
+
+let str3 = str1 + str2;
+// console.log(str3);
+
+// console.log("1" + 2); //12
+// console.log(1 + "2"); //12
+// console.log("1" + 2 + 2); //122
+// console.log(1 + 2 + "2"); //32
+
+//? Increment (++)
+//? The increment (++) operator increments (adds one to) its operand and returns the value before or after the increment,
+//? depending on where the operator is placed.
+
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
