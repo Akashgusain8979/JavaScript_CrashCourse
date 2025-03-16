@@ -1,5 +1,6 @@
-//?=====================> Lesson 4: Functions in JavaScript 🚀<========================
+//?=====================> Functions in JavaScript 🚀<========================
 //? Functions allow us to write reusable blocks of code.
+
 //? 1️⃣ What is a Function?
 //? A function is a block of code designed to perform a specific task.
 //? We define a function using function, and call it using its name.
@@ -10,7 +11,9 @@ function functionName() {
   let b = "Gusain";
   console.log(a, b);
 }
-functionName(); // Calling the function
+
+// functionName // It is the refrence of the function
+// functionName(); // Calling the function
 
 //? Functions help avoid repetition and make code more organized.
 
@@ -21,16 +24,26 @@ functionName(); // Calling the function
 function greetUser(name) {
   console.log("Hello, " + name + "!");
 }
-greetUser("Akash");
-greetUser("Akanksha");
+// greetUser("Akash");
+// greetUser("Akanksha");
 
 //? 📌 Multiple parameters:
 
-function addNumbers(a, b) {
-  console.log(a + b);
+// function addNumbers(number1, number2) {
+//   console.log(number1 + number2);
+// }
+// addNumbers(5, 2); // 7
+// const sum = addNumbers(5, 2);
+// console.log(sum); // undefined
+
+function addNumbers(number1, number2) {
+  let sum = number1 + number2;
+  return sum;
+  console.log("Akash"); // it will never execute because after return nothing executes
 }
-addNumbers(5, 2);
-addNumbers(10, 20);
+// addNumbers(5, 2); // 7
+const sum = addNumbers(5, 2);
+console.log("Result: ", sum); // Result: 7
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //? 4️⃣ Function with Return Value
@@ -40,7 +53,7 @@ function multiply(a, b) {
   return a * b;
 }
 let result = multiply(5, 2);
-console.log(result);
+// console.log(result);
 
 //? 📌 return stops function execution and sends back a value.
 
@@ -52,7 +65,7 @@ let square = function (num) {
   return num * num;
 };
 
-console.log(square(6));
+// console.log(square(6));
 
 //? 📌 Functions stored in variables are called function expressions.
 
@@ -61,12 +74,12 @@ console.log(square(6));
 //? Introduced in ES6, arrow functions provide a shorter way to write functions.
 
 const add = (a, b) => a + b;
-console.log(add(3, 7));
+// console.log(add(3, 7));
 
 //? 📌 If the function has one parameter, we can omit the parentheses:
 const greet = (name) => console.log("Hello, " + name);
 
-greet("Akash");
+// greet("Akash");
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //? 7️⃣ Default Parameters
@@ -75,8 +88,8 @@ greet("Akash");
 function info(name = "Guest") {
   console.log("Hello, " + name + "!");
 }
-info(); //Guest
-info("Lakshiv"); //Lakshiv
+// info(); //Guest
+// info("Lakshiv"); //Lakshiv
 //? 📌 If no argument is passed, the default value is used.
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -84,23 +97,30 @@ info("Lakshiv"); //Lakshiv
 // ?An IIFE runs automatically when defined.
 
 (function () {
-  console.log("This function runs immediately!");
+  // console.log("This function runs immediately!");
 })();
 
 // ?✅ Useful for one-time execution
 // ?✅ Avoids polluting the global scope
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-let globalVar = "I am global";
-//?  Function Scope (Local vs Global Variables)
-//?🔹 Global Variable: Can be used anywhere in the code.
-//?🔹 Local Variable: Defined inside a function and can only be used there.
+// function loginUserMessage(username) {
+//   if (username === undefined) {
+//     console.log("PLease enter username");
+//     return;
+//   }
+//   return `${username} just logged in`;
+// }
 
-function example() {
-  let localVar = "I am local";
-  console.log(globalVar); //✅ Works
-  console.log(localVar); //✅ Works
+// // console.log(loginUserMessage("Akshat"));
+// console.log(loginUserMessage());
+
+function loginUserMessage(username = "Akash") {
+  if (username === undefined) {
+    console.log("PLease enter username");
+    return;
+  }
+  return `${username} just logged in`;
 }
-example();
-console.log(globalVar); //✅ Works
-console.log(localVar); //❌ Error (localVar is not defined outside)
+
+console.log(loginUserMessage("Akshat"));
+console.log(loginUserMessage());
