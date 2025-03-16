@@ -96,7 +96,7 @@ let day = new Date().getDate();
 let person = { name: "Alice", age: 25, city: "New York" };
 
 for (let key in person) {
-  console.log(key + ": " + person[key]);
+  // console.log(key + ": " + person[key]);
 }
 
 const info = { fname: "Akash", score: 100 };
@@ -136,5 +136,23 @@ do {
   i++;
 } while (i < 10);
 {
-  console.log(text);
+  // console.log(text);
+}
+
+const balance = 1000;
+
+// don't do like this
+// if (balance > 500) console.log("test1"), console.log("test2");
+
+const userLoggedIn = true;
+const debitCard = true;
+const loggedInFromGoogle = false;
+const isLogggedInFromEmail = true;
+
+if (userLoggedIn && debitCard && 2 == 2) {
+  console.log("Allow to buy course");
+}
+
+if (loggedInFromGoogle || isLogggedInFromEmail) {
+  console.log("User Logged in");
 }

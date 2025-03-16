@@ -85,6 +85,40 @@ Operator	       Name	      Example (a = 10, b = 5)	    Result
 // console.log(undefined == 0);
 // console.log(undefined >= 0);
 
-console.log("2" == 2); //checks only value
+// console.log("2" == 2); //checks only value
 
-console.log("2" === 2); //  checks value and type
+// console.log("2" === 2); //  checks value and type
+
+//? 5️⃣Nullish Coalescing Operator (??)
+// This operator returns its right hand side operand when its left-hand operand is null or undefined, and otherwise returns its left-hand side operand.
+
+// The Nullish Coalescing Operator (??) is used to provide a default value when dealing with null or undefined values. It helps prevent unintended falsy evaluations like 0, "", or false.
+
+// The result of a ?? b is :-
+// if a is defined, then a
+// if a isn't defined, then b
+
+let user1;
+console.log(user1 ?? "Anonymous");
+
+let user2 = "Rudransh";
+console.log(user2 ?? "Anonymous");
+
+let val1;
+val1 = null ?? 10;
+val2 = undefined ?? 15;
+
+console.log(val1);
+console.log(val2);
+
+let firstName = null;
+let lastName = null;
+let nickName = "Guru";
+
+console.log(firstName ?? lastName ?? nickName);
+
+// ? Ternary Operator
+// condition ? true : false;
+
+const price = 100;
+price > +80 ? console.log("more than 80") : console.log("less than 80");
