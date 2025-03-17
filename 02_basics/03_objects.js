@@ -42,3 +42,19 @@ JsUser.greetingTwo = () => {
 };
 
 console.log(JsUser.greetingTwo());
+
+//? Objects are not iterable by (for of) loop
+const myObject = {
+  game1: "Mario",
+  game2: "IGI",
+  game3: "Spiderman",
+};
+
+// for (const [key, value] of myObject) {
+// console.log(`${key} : ${value}`); // myObject is not iterable
+// }
+
+//? we can use (for in) loop for iterating an object
+// for (const key in myObject) {
+// console.log(`${key} is related to ${myObject[key]}`);
+// }

@@ -27,15 +27,15 @@ const edufy = new Map([
 
 // ?📌 Using forEach()
 
-// edufy.forEach((value, key) => {
-//   console.log(`${key}: ${value}`);
-// });
+edufy.forEach((value, key) => {
+  //   console.log(`${key}: ${value}`);
+});
 
 // ?📌 Using for...of
 
-// for (let [key, value] of edufy) {
-//   console.log(`${key} : ${value}}`);
-// }
+for (let [key, value] of edufy) {
+  //   console.log(`${key} : ${value}}`);
+}
 
 // ?5️⃣ Converting Map to an Array
 // ?You can use the spread operator (...) to convert a Map into an array
@@ -69,4 +69,13 @@ const totalMarks = [...studentMarks.values()].reduce(
 
 const avgMarks = totalMarks / studentMarks.size;
 
-console.log(`Average marks:${avgMarks}`);
+// console.log(`Average marks:${avgMarks}`);
+
+const map = new Map();
+map.set("IN", "India");
+map.set("USA", "United States of America");
+map.set("FR", "France");
+
+for (const key in map) {
+  console.log(key); // maps are not iterable by for in loop
+}
