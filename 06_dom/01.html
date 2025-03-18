@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>DOM Learning</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div class="bg-black">
+        <h1 id="title" class="heading">DOM Learning on chai aur code <span style="display:none">with Akash Gusain
+            </span>
+        </h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <ul>
+            <li class="list-item">About</li>
+            <li class="list-item">Contact</li>
+            <li class="list-item">Home</li>
+            <li class="list-item">Career</li>
+        </ul>
+     
+    </div>
+</body>
+
+<script>
+    // Accessing Elements in the DOM
+    // JavaScript provides various methods to select and manipulate DOM elements.
+
+    // 1.Selecting Elements
+    const title = document.getElementById("title"); //Selects an element by its ID
+    const heading = document.getElementsByClassName("heading")[0]; //Selects elements by class (returns a collection)
+const h1 =document.querySelector("h2"); //Selects the first matching element
+
+document.querySelector("#title");
+document.querySelector(".heading")
+
+const myUl=document.querySelector("ul");
+// console.log(myUl);
+const turnGreen=myUl.querySelector("li")
+// console.log(turnGreen);
+// turnGreen.style.backgroundColor="green";
+// turnGreen.style.padding="16px";
+
+const myli= document.querySelectorAll('li');
+// console.lo(myli);
+// myli.style.color="green" // ❌ Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+
+// ✅ Works
+// myli[0].style.color="brown";
+
+const myH1=document.querySelectorAll("h1");
+// myH1[0].style.color="blue"
+
+// ✅ Works
+// myli.forEach((i)=> i.style.backgroundColor="green")
+
+
+const listItems=document.getElementsByClassName("list-item");
+console.log(listItems);
+// listItems.forEach((i)=>i.style.color="blue")  // ❌ Uncaught TypeError:
+const myConvertedArray=Array.from(listItems) //to convert HTML Collection into array
+console.log(myConvertedArray);
+myConvertedArray.forEach((i)=>i.style.color="yellow")
+
+
+    // 2.Changing Styles
+    title.style.backgroundColor = "green"
+    title.style.padding = "15px"
+    title.style.borderRadius = "2px";
+
+
+
+
+    //3. Manipulating DOM Elements
+    title.textContent;
+    title.innerHTML; //  Changes the inner HTML (includes child elements and tags).
+    title.innerText;//Changes the text inside an element.
+
+
+
+    // document.getElementById("title").id;
+    // document.getElementById("title").className;
+
+    
+    
+    // 4.Changing Attributes
+    // document.getElementById("title").getAttribute('id'); // Gets an attribute value.
+    // document.getElementById("title").getAttribute('class');
+    // document.getElementById("title").getAttribute('id');
+    //  document.getElementById("title").setAttribute('class', 'test'); //Sets an attribute.
+    //  document.getElementById("title").removeAttribute('class', 'test'); //removes an attribute.
+
+
+</script>
+
+</html>
