@@ -1,4 +1,137 @@
 {
-  "editor.fontSize": 18,
-  "files.autoSave": "afterDelay"
+  "editor.fontFamily": "Fira Code, Cascadia",
+  "editor.fontWeight": "500",
+  "editor.fontLigatures": true,
+
+  "editor.minimap.autohide": true,
+  "editor.mouseWheelZoom": true,
+  "editor.smoothScrolling": true,
+  "tabnine.experimentalAutoImports": true,
+  "workbench.colorTheme": "Cobalt2",
+  // "editor.fontFamily": "Fira Code, Cascadia",
+  "editor.fontSize": 16,
+
+  "breadcrumbs.enabled": false,
+
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "on",
+  "editor.codeLens": false,
+  "editor.folding": false,
+  "editor.glyphMargin": false,
+  "editor.formatOnSave": true,
+  "editor.hover.enabled": true,
+  "editor.colorDecorators": false,
+  "editor.cursorBlinking": "expand",
+  "editor.renderWhitespace": "none",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.guides.indentation": false,
+  "editor.renderControlCharacters": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.renderLineHighlight": "all",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.suggestSelection": "first",
+  "javascript.suggest.enabled": true,
+  "typescript.suggest.enabled": true,
+
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  // "editor.fontWeight": "600",
+  // "editor.fontLigatures": true,
+  "workbench.iconTheme": "material-icon-theme",
+
+  "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"],
+
+  // === Files ===
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": false,
+    "**/node_modules": true
+  },
+
+  "explorer.compactFolders": false,
+
+  // === Emmet ===
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.format.enable": false, // Use Prettier instead
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  // === ESLint ===
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+
+  // === Prettier Formatter ===
+
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+  "prettier.arrowParens": "always",
+  "prettier.tabWidth": 2,
+
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
+  "emmet.triggerExpansionOnTab": false
 }
