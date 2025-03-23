@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JS</title>
+  </head>
+  <body>
+    <ul id="images">
+      <li>
+        <img
+          width="200px"
+          id="photoshop"
+          src="https://images.pexels.com/photos/1387037/pexels-photo-1387037.jpeg"
+          alt="phptoshop"
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="japan"
+          src="https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="river"
+          src="https://images.pexels.com/photos/2233391/pexels-photo-2233391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="owl"
+          src="https://images.pexels.com/photos/1376986/pexels-photo-1376986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="prayer"
+          src="https://images.pexels.com/photos/325468/pexels-photo-325468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+        />
+      </li>
+      <li>
+        <a style="color: #12cde4" href="https://google.com" id="google"
+          >Google</a
+        >
+      </li>
+    </ul>
+  </body>
+  <script>
+    // document.getElementById('owl').onclick = () => {
+    //   alert('You clicked on the owl image');
+    // };
+
+    // another approach
+    // atttachEvent()
+    // juery - onEventListener
+
+    // type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, screenX, screenY,altkey, ctrlkey, shiftkey, keycode
+
+    // best approach
+    // document.getElementById('owl').addEventListener(
+    //   'click',
+    //   (e) => {
+    //     // alert('You clicked on the owl image again');
+    //     console.log(e);
+    //   },
+    //   false
+    // );
+
+    document.getElementById('images').addEventListener(
+      'click',
+      (e) => {
+        // console.log('clicked inside the ul');
+      },
+      false
+    );
+
+    document.getElementById('owl').addEventListener(
+      'click',
+      (e) => {
+        // console.log('owl clicked');
+        // e.stopPropagation(); // to stop event bubbling
+      },
+      false // this false is by default and used for event propagtion
+    );
+
+    document.getElementById('google').addEventListener(
+      'click',
+      (e) => {
+        // e.preventDefault();
+        // e.stopPropagation(); // to stop event bubbling
+        // console.log('google clicked');
+      },
+      false
+    );
+
+    document.querySelector('#images').addEventListener(
+      'click',
+      (e) => {
+        console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+          console.log(e.target.id);
+          let removeIt = e.target.parentNode;
+          removeIt.remove();
+        }
+      },
+      false
+    );
+  </script>
+</html>
