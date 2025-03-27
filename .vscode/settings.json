@@ -133,5 +133,9 @@
     }
   ],
   "editor.suggest.snippetsPreventQuickSuggestions": true,
+<<<<<<< HEAD
   "emmet.triggerExpansionOnTab": true
+=======
+  "emmet.triggerExpansionOnTab": false
+>>>>>>> 7dfca29a7636bad99a5326840676162c5f1fd168
 }
