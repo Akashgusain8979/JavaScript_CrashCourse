@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "seyyedkhandon.firacode",
+    "zignd.html-css-class-completion",
+    "xabikos.javascriptsnippets",
+<<<<<<< HEAD
+    "bradlc.vscode-tailwindcss",
+    "wallabyjs.quokka-vscode"
+=======
+    "bradlc.vscode-tailwindcss"
+>>>>>>> 7dfca29a7636bad99a5326840676162c5f1fd168
+  ]
+}
