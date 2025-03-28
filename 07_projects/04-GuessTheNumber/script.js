@@ -16,32 +16,15 @@ let playGame = true;
 if (playGame) {
   submit.addEventListener('click', (e) => {
     e.preventDefault();
-    const guess = parseInt(userInput.value);
+    const guess = parsInt(userInput.value);
     console.log(guess);
 
     validateGuess(guess);
   });
 }
 
-function validateGuess(guess) {
-  if (isNaN(guess)) {
-    alert('Please enter a valid number');
-  } else if (guess < 1) {
-    alert('Please enter a number greater than 0');
-  } else if (guess > 100) {
-    alert('Please enter a number less than 1000');
-  } else {
-    prevGuess.push(guess);
-    if (numGuess === 11) {
-      displayGuess(guess);
-      displayMessage(`Game over. Random number was ${randomNumber}`);
-      endGame();
-    } else {
-      displayGuess(guess);
-      checkGuess(guess);
-    }
-  }
-}
+
+
 
 function checkGuess(guess) {
   if (guess === randomNumber) {
